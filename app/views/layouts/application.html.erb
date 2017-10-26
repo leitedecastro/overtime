@@ -15,5 +15,10 @@
   		</div>
   	</div>
   </div>
+  <%= js add_gritter(
+    flash[:notice], image: :success, sticky: false, time: 3000,
+    title: "App Notification"
+  )%>
+
 </body>
 </html>
