@@ -8,7 +8,8 @@ describe 'navigate' do
 
   describe 'edit' do
     before do
-      @post = FactoryGirl.create(:post)
+      @user = FactoryGirl.create(:user)
+      @post = FactoryGirl.create(:post, user: @user)
       visit edit_post_path(@post)
     end
 
@@ -21,8 +22,7 @@ describe 'navigate' do
 
     it 'cannot be edited by a non admin' do
       logout(:user)
-      user = FactoryGirl.create(:user)
-      login_as(user, scope: :user)
+      login_as(@user, scope: :user)
 
       visit edit_post_path(@post)
 
