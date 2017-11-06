@@ -7,6 +7,11 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name, :last_name, :phone
   has_many :posts
 
+  PHONE_REGEX = /\A\d+\z/
+
+  validates_format_of :phone, with: PHONE_REGEX
+  validates :phone, length: { is: 10 }
+
   def full_name
     last_name.upcase + ", " + first_name.upcase
   end
