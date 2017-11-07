@@ -5,7 +5,7 @@
   phone: "5555555"
 )
 
-puts "1 user created"
+puts "1 User created"
 
 AdminUser.create(
   email: "admin@example.com",
@@ -14,7 +14,7 @@ AdminUser.create(
   phone: "5555555"
 )
 
-puts "1 admin user created"
+puts "1 AdminUser created"
 
 100.times do |post|
   Post.create!(
@@ -25,4 +25,14 @@ puts "1 admin user created"
   )
 end
 
-puts "100 Post have been created"
+puts "100 Posts have been created"
+
+100.times do |audit_log|
+  AuditLog.create!(
+    user_id: @user.id,
+    status: 0,
+    start_date: (Date.today - 6.days)
+  )
+end
+
+puts "100 AuditLogs have been created"
