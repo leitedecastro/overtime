@@ -33,4 +33,4 @@ gem 'pundit', '1.1.0'
 gem 'puma', '3.6.0'
 gem 'twilio-ruby', '4.11.1'
 gem 'dotenv-rails', '2.1.0', groups: [:development, :test]
-gem 'kaminari', '0.17.0'
+gem 'kaminari'
