@@ -34,3 +34,4 @@ gem 'puma', '3.6.0'
 gem 'twilio-ruby', '4.11.1'
 gem 'dotenv-rails', '2.1.0', groups: [:development, :test]
 gem 'kaminari'
+gem 'rails_12factor', group: :production
