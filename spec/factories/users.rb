@@ -3,7 +3,7 @@ FactoryGirl.define do
     "test#{n}@example.com"
   end
 
-  factory :user do
+  factory :user, class: "Employee" do
     email { generate :email }
     password "asdfasdf"
     password_confirmation "asdfasdf"
