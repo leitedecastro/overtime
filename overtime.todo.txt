@@ -1,0 +1,4 @@
+choose a better layout for the site
+fix seeds to generate better values
+delete all sms and email features
+publish initial version to Heroku
